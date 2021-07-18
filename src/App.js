@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "./App.css";
-import Information from "./info-json";
+import React, { Component } from 'react';
+import './App.css';
+import Information from './info-json';
 
 class App extends Component {
   constructor() {
@@ -17,6 +17,7 @@ class App extends Component {
   };
 
   render() {
+    // eslint-disable-next-line array-callback-return
     const items = Information.filter((data) => {
       if (this.state.search == null) return data;
       else if (
@@ -38,7 +39,7 @@ class App extends Component {
             <div className="item-description">
               <h3>{data.name}</h3>
               <h5>{data.price}</h5>
-              <p style={{ fontSize: "10pt" }}>stock: {data.stock}</p>
+              <p style={{ fontSize: '10pt' }}>stock: {data.stock}</p>
               <h6>{data.category}</h6>
             </div>
           </div>
